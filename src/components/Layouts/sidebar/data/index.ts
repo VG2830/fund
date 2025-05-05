@@ -1,14 +1,20 @@
 import { url } from "inspector";
 import * as Icons from "../icons";
-
+import { LuIndianRupee } from "react-icons/lu";
+import { IoPersonAddOutline } from "react-icons/io5";
+import { MdOutlineManageAccounts } from "react-icons/md";
+import { MdOutlineSpaceDashboard } from "react-icons/md";
+import {  ArrowLeftRight} from "lucide-react";
+import { TbLogout2 } from "react-icons/tb";
 export const NAV_DATA = [
   {
     label: "MAIN MENU",
     items: [
+     
       {
         title: "Dashboard",
         url : "/admin",
-        icon: Icons.HomeIcon,
+        icon: MdOutlineSpaceDashboard ,
         items: [],
       },
       // {
@@ -18,30 +24,45 @@ export const NAV_DATA = [
       //   items: [],
       // },
       {
-        title: "Manage Employee",
-        url: "/admin/manage-employees",
-        icon: Icons.User,
-        items: [],
-      },
-      {
-        title: "Profile",
-        url: "/admin/profile",
-        icon: Icons.User,
-        items: [],
-      },
-      {
         title: "Add Employee",
         url: "/admin/add-employee/",
-        icon: Icons.Alphabet,
+        icon: IoPersonAddOutline ,
         items: [
-          // {
-          //   title: "Form Elements",
-          //   url: "/forms/form-elements",
-          // },
-          // {
-          //   title: "Add Employee",
-            
-          // },
+         
+        ],
+      },
+      // {
+      //   title: "Profile",
+      //   url: "/admin/profile/",
+      //   icon: IoPersonAddOutline ,
+      //   items: [
+         
+      //   ],
+      // },
+      {
+        title: "Manage Employee",
+        url: "/admin/manage-employees",
+        icon: MdOutlineManageAccounts ,
+        items: [],
+      },
+      {
+        title: "Payment",
+        url: "/user/payment",
+        icon:LuIndianRupee ,
+        items: [],
+      },
+      {
+        title: "Transaction",
+        url: "/admin/transaction",
+        icon: ArrowLeftRight  ,
+        items: [],
+      },
+      {
+        title: "Logout",
+        icon:TbLogout2,
+       
+        url: "/",
+        items: [
         ],
       },
       // {
@@ -67,43 +88,11 @@ export const NAV_DATA = [
       // },
     ],
   },
-  // {
-  //   label: "OTHERS",
-  //   items: [
-  //     {
-  //       title: "Charts",
-  //       icon: Icons.PieChart,
-  //       items: [
-  //         {
-  //           title: "Basic Chart",
-  //           url: "/charts/basic-chart",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       title: "UI Elements",
-  //       icon: Icons.FourCircle,
-  //       items: [
-  //         {
-  //           title: "Alerts",
-  //           url: "/ui-elements/alerts",
-  //         },
-  //         {
-  //           title: "Buttons",
-  //           url: "/ui-elements/buttons",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       title: "Authentication",
-  //       icon: Icons.Authentication,
-  //       items: [
-  //         {
-  //           title: "Sign In",
-  //           url: "/auth/sign-in",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
+  {
+    
+    items: [
+    
+     
+    ],
+  },
 ];

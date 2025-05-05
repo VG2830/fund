@@ -36,7 +36,7 @@ React.HTMLAttributes<HTMLDivElement>
 <div
 ref={ref}
 className={cn(
-  "text-2xl font-semibold leading-none tracking-tight",
+  "text-2xl  dark:text-white font-semibold leading-none tracking-tight",
   className
 )}
 {...props}

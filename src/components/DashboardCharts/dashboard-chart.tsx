@@ -38,7 +38,7 @@ const pieChartData = [
 
 export function LineChartComponent() {
 return (
-  <Card className="col-span-3">
+  <Card className="col-span-3 dark:bg-[#020d1a]">
     <CardHeader>
       <CardTitle>Investment Growth</CardTitle>
       <CardDescription>Monthly investment growth over the past year</CardDescription>
@@ -67,7 +67,7 @@ return (
 
 export function PieChartComponent() {
     return (
-      <Card className="col-span-2">
+      <Card className="col-span-2 dark:bg-[#020d1a]">
         <CardHeader>
           <CardTitle>Fund Distribution</CardTitle>
           <CardDescription>Breakdown of fund allocation</CardDescription>

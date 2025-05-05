@@ -1,14 +1,14 @@
-import darkLogo from "@/assets/logos/dark.svg";
-import logo from "@/assets/logos/main.svg";
+import darkLogo from "@/assets/logos/ekarigar_logo_dark_mode.svg";
+import logo from "@/assets/logos/ekarigar_logo.svg";
 import Image from "next/image";
 
 export function Logo() {
   return (
-    <div className="relative h-8 max-w-[10.847rem]">
+    <div className="relative h-14 max-w-[10.847rem] ">
       <Image
-        src={logo}
+        src={darkLogo}
         fill
-        className="dark:hidden"
+        className="dark:hidden "
         alt="NextAdmin logo"
         role="presentation"
         quality={100}

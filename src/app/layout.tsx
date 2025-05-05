@@ -24,7 +24,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="h-screen overflow-hidden">
+      {/* className:h-screen overflow-hidden */}
+      <body >
         <Providers>
           <NextTopLoader color="#5750F1" showSpinner={false} />
           {/* <main className="h-full w-full overflow-hidden p-4 md:p-6 2xl:p-10">

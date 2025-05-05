@@ -52,10 +52,10 @@ export function Sidebar() {
           aria-hidden="true"
         />
       )}
-
+{/* bg-[#2bc8d3] */}
       <aside
         className={cn(
-          "max-w-[290px] overflow-hidden border-r border-gray-200 bg-white transition-[width] duration-200 ease-linear dark:border-gray-800 dark:bg-gray-dark",
+          "max-w-[290px] overflow-hidden border-r border-gray-200 bg-[#1e88e1]  transition-[width] duration-200 ease-linear dark:border-gray-800 dark:bg-gray-dark",
           isMobile ? "fixed bottom-0 top-0 z-50" : "sticky top-0 h-screen",
           isOpen ? "w-full" : "w-0",
         )}
@@ -86,17 +86,20 @@ export function Sidebar() {
           </div>
 
           {/* Navigation */}
-          <div className="custom-scrollbar mt-6 flex-1 overflow-y-auto pr-3 min-[850px]:mt-10">
-            {NAV_DATA.map((section) => (
-              <div key={section.label} className="mb-6">
-                <h2 className="mb-5 text-sm font-medium text-dark-4 dark:text-dark-6">
+          <div className="custom-scrollbar  mt-6 flex-1 overflow-y-auto pr-3 min-[850px]:mt-10">
+            {NAV_DATA.map((section,index) => (
+             <div key={`${section.label}-${index}`} className="mb-6">
+
+                <div className="p-3"><h2 className="mb-5 text-xl font-medium text-white">
                   {section.label}
                 </h2>
-
+                </div>
                 <nav role="navigation" aria-label={section.label}>
                   <ul className="space-y-2">
-                    {section.items.map((item) => (
-                      <li key={item.title}>
+                  {section.items.map((item,index) => (
+                       <li key={`${item.title}-${index}`}>
+
+                  
                         {item.items.length ? (
                           <div>
                             <MenuItem
@@ -127,9 +130,11 @@ export function Sidebar() {
                                 className="ml-9 mr-0 space-y-1.5 pb-[15px] pr-0 pt-2"
                                 role="menu"
                               >
-                                {item.items.map((subItem) => (
-                                  <li key={subItem.title} role="none">
+                                {item.items.map((subItem, index) => (
+                                 <li key={`${subItem.title}-${index}`} role="none">
+
                                     <MenuItem
+                                  
                                       as="link"
                                       href={subItem.url}
                                       isActive={pathname === subItem.url}
@@ -151,17 +156,17 @@ export function Sidebar() {
 
                             return (
                               <MenuItem
-                                className="flex items-center gap-3 py-3"
+                                className="flex items-center gap-3 py-5  "
                                 as="link"
                                 href={href}
                                 isActive={pathname === href}
                               >
                                 <item.icon
-                                  className="size-6 shrink-0"
+                                  className="size-6 shrink-0  "
                                   aria-hidden="true"
                                 />
 
-                                <span>{item.title}</span>
+                                <span >{item.title}</span>
                               </MenuItem>
                             );
                           })()
