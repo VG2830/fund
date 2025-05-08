@@ -35,9 +35,9 @@ export function Header() {
       )}
 
       <div className="max-xl:hidden">
-        <h1 className="mb-0.5 text-heading-5 font-bold text-white">
-          Admin Dashboard
-        </h1>
+        <h2 className="mb-0.5 text-heading-5 font-bold text-white">
+          Welcome Admin
+        </h2>
       </div>
 
       <div className="flex flex-1 items-center justify-end gap-2 min-[375px]:gap-4">

@@ -281,7 +281,7 @@ export default function EmployeesPage() {
                     <TableCell className="text-right">
                       <div className="px-6 py-4 whitespace-nowrap flex justify-center items-center gap-4">
                         <div className="flex items-center text-blue-600 hover:text-blue-900 text-sm">
-                          <Eye className="mr-2 h-4 w-4" /> View
+                          <Eye className="mr-2 h-4 w-4" /><a href="#" className="dark:text-white"> View</a>
                         </div>
                         <div className="flex items-center text-gray-600 hover:text-gray-900 text-sm">
                           <Pencil className="mr-2 h-4 w-4" />

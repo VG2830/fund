@@ -1,6 +1,7 @@
 "use client";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { useEffect, useState } from "react";
+import { Input } from "@/components/ui/input";
  
 const transactions = [
   { name: "Rahul", pid: "97897874487", date: "2025-04-15", time: "10:30 AM", srnshoot: "image" },
@@ -30,7 +31,11 @@ export default function LastTransactionPage() {
     });
     setFilteredTxns(filtered);
   }, [selectedMonth, selectedYear]);
- 
+  const [searchTerm, setSearchTerm] = useState("");
+  const filteredEmployees = transactions.filter((transactions) =>
+    transactions.name.toLowerCase().includes(searchTerm.toLowerCase()),
+  )
+
   const months = [
     { value: "01", label: "January" },
     { value: "02", label: "February" },
@@ -80,7 +85,11 @@ export default function LastTransactionPage() {
             </select>
           </div>
         </div>
- 
+        <div className="flex items-center justify-between">
+        <div className="w-full max-w-sm">
+          <Input placeholder="Search " value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+        </div>
+      </div>
         <div className="rounded-md border shadow-sm overflow-x-auto">
           <Table>
             <TableHeader className="bg-indigo-100 dark:bg-indigo-900">

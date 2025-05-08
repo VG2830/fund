@@ -53,12 +53,12 @@ export default function SignIn() {
               </p>
 
               <div className="mt-31">
-                <Image
-                  src={"/images/grids/grid-02.svg"}
-                  alt="Logo"
-                  width={405}
-                  height={325}
-                  className="mx-auto dark:opacity-30"
+              <Image
+                src={"/images/grids/grid-02.svg"}
+                alt="Logo"
+                width={405}
+                height={325}
+                className="mx-auto dark:opacity-30"
                 />
               </div>
             </div>
